@@ -30,3 +30,17 @@ The initial workbook contained invalid merged-cell records and compatibility iss
 
 **Revision Made:**
 Rebuilt the workbook without merged cells, corrected the executive summary reference, replaced incompatible validation checks, and verified the workbook opened cleanly in Microsoft Excel with passing validation checks.
+
+## Stage 4 – Live Market Data, Workbook Population, and Audit
+
+**Prompt:**
+Complete Stage 4 using the existing Stage 3 EUR receivable workbook, replace placeholder inputs with August 7, 2026 market-close data, document sources and proxy choices, calculate the forward through covered interest parity when necessary, populate the named input cells, and verify the recalculated workbook.
+
+**AI Assistance:**
+AI assisted with researching the EUR/USD close, the U.S. one-year Treasury yield, and the latest available ECB one-year AAA euro-government yield; calculating the CIP-implied forward; populating and auditing the existing named-range input cells; checking the sensitivity table and chart; and drafting the market-data memo.
+
+**Issue Found:**
+After the existing workbook was imported, the Sensitivity scatter chart lost its settlement-rate x-value references and displayed point indices instead of exchange rates. The ECB's August 7 one-year AAA yield observation was also not yet available at retrieval, so the latest published August 6 observation had to be disclosed as the euro-rate proxy.
+
+**Revision Made:**
+Rebuilt only the chart object against the existing formula-driven sensitivity ranges, preserved all model formulas, used the official August 7 U.S. Treasury observation and the latest available ECB one-year euro-government observation, calculated `F0_in` through CIP at full precision, and verified the candidate in Microsoft Excel with a passing parity check and zero formula errors. The FX Hedging Lab was not directly accessible, so the memo includes explicit inputs and outputs for a manual cross-check rather than claiming completion.
