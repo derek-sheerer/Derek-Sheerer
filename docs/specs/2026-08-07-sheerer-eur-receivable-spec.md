@@ -13,7 +13,7 @@ The firm expects to receive EUR 4,500,000 in one year from a European customer. 
 |-------------|-------------------|------|----------------|
 | FC_AMT | 4,500,000 | EUR | Scenario assignment |
 | S0_in | 1.10 | USD/EUR | Live spot market |
-| F0_in | 1.11 | USD/EUR | Live forward quote |
+| F0_in | 1.13005 | USD/EUR | Live forward quote |
 | R_USD | 5.30% | Annual % (ACT/360) | Federal Reserve H.15 |
 | R_FC | 2.50% | Annual % (ACT/360) | ECB reference rate |
 | K_PUT | 1.10 | USD/EUR | Option market |
@@ -23,6 +23,8 @@ The firm expects to receive EUR 4,500,000 in one year from a European customer. 
 | T_DAYS | 360 | Days | Scenario assignment |
 
 *All placeholder values are indicative and will be replaced with live market data during Phase 4.
+
+**Placeholder revision note:** The indicative `F0_in` placeholder was revised from 1.11 to 1.13005 USD/EUR, the covered-interest-parity implied rate rounded to five decimal places using the placeholder spot and interest-rate inputs. This keeps the parity validation and the forward-versus-money-market proceeds check internally consistent, subject only to normal rounding.
 
 ---
 
